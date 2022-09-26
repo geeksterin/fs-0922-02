@@ -1,0 +1,54 @@
+// "static void main" must be defined in a public class.
+public class Main {
+    public static void main(String[] args) {
+        /* System.out.println("Hello World!");
+        System.out.println("Krishna Madan");
+        System.out.print("Krishna Madan\n");
+        System.out.print("Hello World!");
+        System.out.print("Hello Java"); 
+        */
+        
+        // 
+        /* sjhsfh 
+        dbjjdslk 
+        nkdsfjljl*/
+        
+        
+        System.out.println("Hello World. I am here");
+        
+        System.out.println("Hello ");
+        System.out.println("World. ");
+        System.out.println("I ");
+        System.out.println("am ");
+        System.out.println("here ");
+        
+        System.out.println("*****");
+        
+        
+        System.out.println("*****");
+        System.out.println("*****");
+        System.out.println("*****");
+        
+        
+        System.out.println("*****");
+        System.out.println("*    ");
+        System.out.println("*    ");
+        System.out.println("*    ");
+        System.out.println("*****");
+
+        
+        System.out.println(10 + 20);
+        System.out.println(10 * 20 * 30);
+        System.out.println(40 - 20);
+        
+        System.out.println(20 + 30 + 50);
+        System.out.println(20 * 30 * 50);
+
+        System.out.println(20 / 10);
+    
+        System.out.println(438 % 9);
+        System.out.println(4596 % 10);
+
+
+    }
+}
