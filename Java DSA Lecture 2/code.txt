@@ -1,1 +1,50 @@
 
+// "static void main" must be defined in a public class.
+public class Main {
+    public static void main(String[] args) {
+//         int x = 100;
+//         System.out.println(x);
+        
+//         int y = 235 ;
+            
+//         System.out.println(y+ 10);
+        
+        
+//         x = 165;
+//         y = 84;
+//         System.out.println(x+y);
+//         System.out.println(x-y);
+//         System.out.println(x*y);
+//         System.out.println(x/y);
+        
+        
+//         x = 20;
+//         y = 30;
+//         int z= 40;
+//         System.out.println(x+y-z);
+        
+        
+//         System.out.println(45983 / 10);
+//         System.out.println(45983 % 10);
+
+
+//         double first = 64.33;
+//         float second = 64.35f;
+        
+//         double factor = 22.44e6;
+        
+        
+        char alphabet = 'a';
+        System.out.println(alphabet);
+        
+        boolean result1 = true;
+        boolean result2 = false;
+        
+        
+        
+      
+        
+    }
+}
+
+
