@@ -3,10 +3,10 @@ public class BankCustomer{
     private String fathersName;
     private int aadhar;
     private int accBalance;
-    private int mobNo;
+    private String mobNo;
     private int ifsc;
 
-    public BankCustomer(String name, String fathersName, int aadhar, int mobNo) {
+    public BankCustomer(String name, String fathersName, int aadhar, String mobNo) {
         this.name = name;
         this.fathersName = fathersName;
         this.aadhar = aadhar;
@@ -33,6 +33,10 @@ public class BankCustomer{
 
     public void setFathersName(String fathersName) {
         this.fathersName = fathersName;
+    }
+
+    public void setMobNo(String mobNo) {
+        if(mob.length() != 10)
     }
 
     public void deposit(int money) {
