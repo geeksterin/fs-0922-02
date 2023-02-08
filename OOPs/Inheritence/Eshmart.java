@@ -14,7 +14,7 @@ class TV {
 
 class ShmartTV extends TV{
     @Override
-    void ON () {
+    void ON() {
         System.out.println("Switched ON new TV : 1secs");
     }
 
