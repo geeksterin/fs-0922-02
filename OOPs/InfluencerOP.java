@@ -8,11 +8,11 @@ public class Solution {
         lst.add(0);
         lst.add(1);
         
-        Influencer raftar = new Influencer("Raftaar", 340, 400, "Yes", 7, 200, "Rapper", 'M');
-        Influencer rachel = new Influencer("Rachel Gupta", 550, 350, "Yes", 15, 10, "Artist", 'M');
-        Influencer nikhil = new Influencer("Nikhil Chinapa", 500, 220, "Yes", 5, 210, "VJ", 'M');
-        Influencer basheer = new Influencer("Baseer", 500, 120, "No", 2, 230, "VJ", 'M');
-        
+        // Influencer raftar = new Influencer("Raftaar", 340, 400, "Yes", 7, 200, "Rapper", 'M');
+        // Influencer rachel = new Influencer("Rachel Gupta", 550, 350, "Yes", 15, 10, "Artist", 'M');
+        // Influencer nikhil = new Influencer("Nikhil Chinapa", 500, 220, "Yes", 5, 210, "VJ", 'M');
+        // Influencer basheer = new Influencer("Baseer", 500, 120, "No", 2, 230, "VJ", 'M');
+        Influencer[] arr = new Influencer[100];
         System.out.println(raftar);
         System.out.println(rachel);
         System.out.println(nikhil);
@@ -55,3 +55,7 @@ class Influencer {
         return sb.toString();
     }
 }
+
+ArrayList
+Stack
+Queue

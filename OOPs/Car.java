@@ -9,7 +9,7 @@ public class Car {
         System.out.println("Non Param called");
     }
 
-    public Car(String company, String name, String colour) { //param
+    public Car(String company, String name, String col) { //param
         System.out.println("Param called");
         this.company = company;
         this.name = name;
