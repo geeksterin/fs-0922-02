@@ -11,19 +11,49 @@ public class Main {
         // cust.deposit(5000); 
         // cust.withdraw(1234);
 
-        Temp t1 = new Temp(5, 6);
-        Temp t2 = new Temp(5, 7);
-        System.out.println("t1 -> " + t1.x + ", " + t1.y);
-        System.out.println("t2 -> " + t2.x + ", " + t2.y);
+        // Temp t1 = new Temp(5, 6);
+        // Temp t2 = new Temp(5, 7);
+        // System.out.println("t1 -> " + t1.x + ", " + t1.y);
+        // System.out.println("t2 -> " + t2.x + ", " + t2.y);
         
-        t1.x ++;
-        t1.y ++;
-        t2.x ++;
-        t2.y ++;
-        Temp.y ++;
+        // t1.x ++;
+        // t1.y ++;
+        // t2.x ++;
+        // t2.y ++;
+        // Temp.y ++;
     
-        System.out.println("t1 -> " + t1.x + ", " + t1.y);
-        System.out.println("t2 -> " + t2.x + ", " + t2.y);
+        // System.out.println("t1 -> " + t1.x + ", " + t1.y);
+        // System.out.println("t2 -> " + t2.x + ", " + t2.y);
+
+        CustomArrayList arr = new CustomArrayList();
+        arr.add(1);
+        arr.add(2);
+        System.out.println(arr);
+        arr.add(2);
+        arr.add(2);
+        arr.add(2);
+        arr.add(2);
+        System.out.println(arr);
+        System.out.println(arr.size());
+        arr.add(3);
+        arr.add(3);
+        arr.add(3);
+        arr.add(3);
+        arr.add(3);
+        arr.add(3);
+        arr.add(3);
+        arr.add(3);
+        arr.add(3);
+        arr.add(3);
+        arr.add(3);
+        arr.add(3);
+        arr.add(3);
+        arr.add(3);
+        arr.add(3);
+        arr.add(3);
+        arr.add(3);
+        System.out.println(arr);
+        System.out.println(arr.size());
     }
 }
 
