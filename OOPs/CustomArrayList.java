@@ -1,12 +1,24 @@
 public class CustomArrayList {
     int cap;
-    int[] arr;
+    private int[] arr;
     int nel; // next element location;
 
     CustomArrayList() {
         cap = 10;
         arr = new int[cap];
         nel = 0;
+    }
+
+    public boolean isEmpty() {
+        return this.size() == 0;
+    }
+
+    public int get(int idx) {
+        if(idx < 0 || idx >= this.size()){
+            System.out.println("No elements to remove");
+            return -1;
+        }
+        return this.arr[idx];
     }
 
     public void add(int ele) { //O(1)
@@ -18,21 +30,21 @@ public class CustomArrayList {
         return this.nel;
     }
 
-    public void remove() { // O(1)
+    public int remove() { // O(1)
         if(nel == 0) {
             System.out.println("No elements to remove");
-            return;
+            return -1;
         }
-        this.nel --;
+        return arr[-- this.nel];
     }
 
-    public void remove(int idx) { //O(n)
+    public int remove(int idx) { //O(n)
         if(idx < 0 || idx >= this.size()){
             System.out.println("idx out of bounds");
-            return;
+            return -1;
         }
         for(int i = idx; i < this.size() - 1; i ++) arr[i] = arr[i + 1];
-        this.nel --;
+        return arr[-- this.nel];
     }
 
     private void grow() { // O(n)
@@ -47,11 +59,11 @@ public class CustomArrayList {
         arr = temp;
     }
 
-    public String toString() { O(n)
+    public String toString() { //O(n)
         StringBuilder sb = new StringBuilder();
         sb.append("[");
         for(int i = 0; i < this.size(); i ++)sb.append(arr[i]).append(", ");
-        sb.delete(sb.length() - 2, sb.length());
+        if(sb.length() > 2) sb.delete(sb.length() - 2, sb.length());
         sb.append("]");
         return sb.toString();
     }

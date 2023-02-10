@@ -25,44 +25,46 @@ public class Main {
         // System.out.println("t1 -> " + t1.x + ", " + t1.y);
         // System.out.println("t2 -> " + t2.x + ", " + t2.y);
 
-        CustomArrayList arr = new CustomArrayList();
-        arr.add(1);
-        arr.add(2);
-        System.out.println(arr);
-        arr.add(2);
-        arr.add(2);
-        arr.add(2);
-        arr.add(2);
-        System.out.println(arr);
-        System.out.println(arr.size());
-        arr.add(3);
-        arr.add(3);
-        arr.add(3);
-        arr.add(3);
-        arr.add(3);
-        arr.add(3);
-        arr.add(3);
-        arr.add(3);
-        arr.add(3);
-        arr.add(3);
-        arr.add(3);
-        arr.add(3);
-        arr.add(3);
-        arr.add(3);
-        arr.add(3);
-        arr.add(3);
-        arr.add(3);
-        System.out.println(arr);
-        System.out.println(arr.size());
-    }
-}
+        // CustomArrayList arr = new CustomArrayList();
+        // arr.add(1);
+        // arr.add(2);
+        // System.out.println(arr);
+        // arr.add(2);
+        // arr.add(2);
+        // arr.add(2);
+        // arr.add(2);
+        // System.out.println(arr);
+        // System.out.println(arr.size());
+        // arr.add(3);
+        // arr.add(3);
+        // arr.add(3);
+        // arr.add(3);
+        // arr.add(3);
+        // arr.add(3);
+        // arr.add(3);
+        // arr.add(3);
+        // arr.add(3);
+        // arr.add(3);
+        // arr.add(3);
+        // arr.add(3);
+        // arr.add(3);
+        // arr.add(3);
+        // arr.add(3);
+        // arr.add(3);
+        // arr.add(3);
+        // System.out.println(arr);
+        // System.out.println(arr.size());
 
-class Temp {
-    int x;
-    static int y = 10;
-
-    Temp(int x, int y) {
-        this.x = x;
-        this.y = y;
+        CustomStack apnaStack = new CustomStack();
+        apnaStack.push(5);
+        apnaStack.push(6);
+        System.out.println(apnaStack);
+        System.out.println(apnaStack.pop());
+        System.out.println(apnaStack.peek());
+        System.out.println(apnaStack.pop());
+        System.out.println(apnaStack.pop());
+        System.out.println(apnaStack.isEmpty());
+        System.out.println(apnaStack.size());
+        System.out.println(apnaStack);
     }
 }
