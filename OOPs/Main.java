@@ -55,16 +55,32 @@ public class Main {
         // System.out.println(arr);
         // System.out.println(arr.size());
 
-        CustomStack apnaStack = new CustomStack();
-        apnaStack.push(5);
-        apnaStack.push(6);
-        System.out.println(apnaStack);
-        System.out.println(apnaStack.pop());
-        System.out.println(apnaStack.peek());
-        System.out.println(apnaStack.pop());
-        System.out.println(apnaStack.pop());
-        System.out.println(apnaStack.isEmpty());
-        System.out.println(apnaStack.size());
-        System.out.println(apnaStack);
+        // CustomStack apnaStack = new CustomStack();
+        // apnaStack.push(5);
+        // apnaStack.push(6);
+        // System.out.println(apnaStack);
+        // System.out.println(apnaStack.pop());
+        // System.out.println(apnaStack.peek());
+        // System.out.println(apnaStack.pop());
+        // System.out.println(apnaStack.pop());
+        // System.out.println(apnaStack.isEmpty());
+        // System.out.println(apnaStack.size());
+        // System.out.println(apnaStack);
+
+        int[] arr = new int[5];
+        for(int i : arr) System.out.print(i + " ");
+        update(arr);
+        for(int i : arr) System.out.print(i + " ");
+        // System.out.println(a);
+         Person sanowar = new Person("Sanowar", 22);
+        Person sanowar2 = new Person();
+        System.out.println(sanowar2.name);
+        System.out.println(sanowar2.age);
     }
+
+    public static void update(int[] arr) {
+        for(int i = 0; i < 5; i ++) arr[i] += i;
+    }
+
+   
 }

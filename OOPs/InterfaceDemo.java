@@ -31,7 +31,7 @@ class SmartPhone implements ICamera, IBrowser{
 
 public class InterfaceDemo {
     public static void main(String[] args) {
-        ICamera phone = new SmartPhone();
+        IBrowser phone = new SmartPhone();
         phone.capture();
         phone.record();
         phone.fun();
