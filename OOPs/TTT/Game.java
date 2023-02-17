@@ -1,12 +1,12 @@
+import java.util.*;
 public class Game {
     Board board;
-    Player[] players
+    Player[] players;
     int turn;// = even -> p1; odd -> p2;
     int noOfMoves;
-    boolean gameOver;
     String zeroPattern;
     String crossPattern;
-
+    public static Scanner scn = new Scanner(System.in);
     Game(Board board, Player[] players) {
         this.board = board;
         this.players = players;
@@ -23,14 +23,17 @@ public class Game {
 
     public void play() {
         System.out.println(board);
-        while(!this.gameOver) {
+        while(true) {
             this.noOfMoves ++;
+            if(this.noOfMoves > board.size * board.size) {
+                System.out.println("Match Draw");
+                return;
+            }
             int[] idxs = getIndex();
             int rn = idxs[0], cn = idxs[1];
             board.board[rn][cn] = players[turn].symbol;
             if(this.noOfMoves >= 2 * board.size - 1 && checkIfTheGameIsEnded()) {
                 System.out.println(board);
-                this.gameOver = true;
                 System.out.println(players[turn].name + " has won !!");
                 return;
             } 
@@ -60,13 +63,13 @@ public class Game {
         // ROWS
         StringBuilder sb;
         for(int i = 0; i < board.size; i ++) {
-            sb =  = new StringBuilder();
+            sb = new StringBuilder();
             for(int j = 0; j < board.size; j ++) sb.append(board.board[i][j]);
             if(getResult(sb)) return true;
         }
         //COLUMN
         for(int i = 0; i < board.size; i ++) {
-            sb =  = new StringBuilder();
+            sb = new StringBuilder();
             for(int j = 0; j < board.size; j ++) sb.append(board.board[j][i]);
             if(getResult(sb)) return true;
         }
