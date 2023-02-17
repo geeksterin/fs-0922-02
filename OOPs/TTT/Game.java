@@ -12,7 +12,6 @@ public class Game {
         this.players = players;
         this.turn = 0;
         this.noOfMoves = 0;
-        this.gameOver = false;
         zeroPattern = "";
         crossPattern = "";
         for(int i = 0; i < board.size; i ++) {

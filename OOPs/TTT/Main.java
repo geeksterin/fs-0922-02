@@ -5,8 +5,9 @@ public class Main {
         Player p2 = new Player("Aman");
         System.out.println(p2);
 
-        Board board = new Board(3);
-        Game game = new Game(board, new Player[]{p1, p2});
+        Board board = new Board(4);
+        // Game game = new Game(board, new Player[]{p1, p2});
+        Game game = new OnePlayerGame(board, new Player[]{p1, p2});
         game.play();
     }
 }
