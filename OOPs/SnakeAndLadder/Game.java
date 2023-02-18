@@ -20,7 +20,10 @@ public class Game {
             int num = Dice.roll();
             printCordsOfPlayers(num);
             if(!isAllowed[turn]) {
-                if(num == 1) isAllowed[turn] = true;
+                if(num == 1) {
+                    isAllowed[turn] = true;
+                    System.out.println("IsAllowed changed for " + players[turn].name);
+                }
                 turn = (turn + 1) % players.length;
                 continue;
             }
