@@ -49,7 +49,7 @@ public class Main {
     }
 
     public static int fiboShort(int n) {
-        return n <= 1 ? n : fibo(n - 1) + fibo(n - 2);
+        return n <= 1 ? n : fiboShort(n - 1) + fiboShort(n - 2);
     }
 
     public static int power(int x, int n) {
@@ -59,6 +59,6 @@ public class Main {
     }
 
     public static int powerShort(int x, int n) {
-        return n == 0 ? 1 : x * power(x, n - 1);
+        return n == 0 ? 1 : x * powerShort(x, n - 1);
     }
 }
