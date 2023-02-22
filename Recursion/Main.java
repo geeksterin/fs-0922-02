@@ -1,6 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println(powerShort(2, 5));
+        // System.out.println(powerShort(2, 5));
+        // postPrint(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}, 9);
+        // prePrint(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}, 0);
+        System.out.println(firstOcc(new int[]{1, 2, 3, 4, 3, 3, 7, 8, 3, 3}, 0, 3));
     }
 
     public static void printDecreasing(int n) {
@@ -61,4 +64,39 @@ public class Main {
     public static int powerShort(int x, int n) {
         return n == 0 ? 1 : x * powerShort(x, n - 1);
     }
+
+    public static int powerLog(int x, int n) {
+        if(n == 0) return 1; 
+        int faith = powerLog(x, n / 2);
+        int exp = faith * faith;
+        return n % 2 == 0 ? exp : exp * x;
+    }
+
+    public static void postPrint(int[] arr, int n) {
+        if(n == -1) return;
+        postPrint(arr,  n - 1);
+        System.out.println(arr[n]);
+    }
+
+    public static void prePrint(int[] arr, int n) {
+        if(n == arr.length) return;
+        System.out.println(arr[n]);
+        prePrint(arr, n + 1);
+    }
+
+    public static int max(int[] arr, int idx) {
+        if(idx == arr.length - 1) return arr[idx];
+        int faith = max(arr, idx + 1);
+        return faith > arr[idx] ? faith : arr[idx];
+    }
+
+    public static int firstOcc(int[] arr, int idx, int ele) {
+        if(idx == arr.length) return  -1;
+        return arr[idx] == ele ? idx : firstOcc(arr, idx + 1, ele);
+    }
+
+    public int[] allOcc(int[] arr, int idx, int ele) {
+        
+    }
+
 }
