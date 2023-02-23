@@ -1,9 +1,16 @@
+import java.util.*;
 public class Main {
     public static void main(String[] args) {
         // System.out.println(powerShort(2, 5));
         // postPrint(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}, 9);
         // prePrint(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 0}, 0);
-        System.out.println(firstOcc(new int[]{1, 2, 3, 4, 3, 3, 7, 8, 3, 3}, 0, 3));
+        // System.out.println(firstOcc(new int[]{1, 2, 3, 4, 3, 3, 7, 8, 3, 3}, 0, 3));
+        // for(int idx : allOcc(new int[]{1, 2, 3, 4, 3, 3, 7, 8, 3, 3}, 0, 3, 0)) {
+        //     System.out.println(idx);
+        // }
+        System.out.println(gss("abcd"));
+        // System.out.println();
+        
     }
 
     public static void printDecreasing(int n) {
@@ -95,8 +102,26 @@ public class Main {
         return arr[idx] == ele ? idx : firstOcc(arr, idx + 1, ele);
     }
 
-    public int[] allOcc(int[] arr, int idx, int ele) {
-        
+    public static int[] allOcc(int[] arr, int idx, int ele, int fsf) {
+        if(idx == arr.length) return new int[fsf];
+        int[] faith = allOcc(arr, idx + 1, ele, arr[idx] == ele ? fsf + 1 : fsf);
+        if(arr[idx] == ele) faith[fsf] = idx;
+        return faith;
     }
 
+    public static ArrayList<String> gss(String str) {
+
+        if(str.length() == 0) {
+            ArrayList<String> base = new ArrayList<>();
+            base.add("");
+            return base;
+        }
+
+        ArrayList<String> faith = gss(str.substring(1));
+        ArrayList<String> exp = new ArrayList<>();
+        char c = str.charAt(0);
+        for(String s : faith) exp.add(c + s); // a accepted
+        for(String s : faith) exp.add(s); // a denied
+        return exp;
+    } 
 }

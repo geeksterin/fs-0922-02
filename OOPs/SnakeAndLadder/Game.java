@@ -13,7 +13,7 @@ public class Game {
         this.positions = new Coordinates[players.length];
         for(int i = 0; i < positions.length; i ++) this.positions[i] = new Coordinates(9, 0);   
     }
-// [p1, p2, p3, p4]\
+// [p1, p2, p3, p4]
 //  0   1   2   3
     public void play() {
         while(true) {
@@ -38,9 +38,8 @@ public class Game {
     }
 
     public void printCordsOfPlayers(int num) {
-        for(int i = 0; i < players.length; i ++){
-            System.out.println(num + " " +players[i].name + ": " + positions[i] + " (" + board.board[positions[i].rn][positions[i].cn]+")");
-        }
+        System.out.println(num + " " +players[turn].name + ": " + positions[turn] + " (" + board.board[positions[turn].rn][positions[turn].cn]+")");
+        
     }
 
     public Coordinates getNewCords(int num) {
