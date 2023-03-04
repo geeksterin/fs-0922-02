@@ -41,6 +41,18 @@ public class CustomLinkedList {
         size += 1;
     }
 
+    public void addAt(int data, int idx) {
+        if(idx == 0) addFirst(data);
+        else if(idx == this.size) addLast(data); 
+        else {
+            Node curr = head;
+            for(int i = 0; i < idx - 1; i ++) curr = curr.next;
+            Node tba = new Node(data, curr.next);
+            curr.next = tba;
+            size ++;
+        }
+    }
+
     public String toString() {
         StringBuilder sb = new StringBuilder();
         Node curr = head;
