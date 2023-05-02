@@ -3,7 +3,10 @@ public class Main {
         // printInc(10);
         // printDec(10);
         // printIncDec(10);
-        System.out.println(fact(10));
+        // System.out.println(fact(10));
+        // fun(5);
+        // System.out.println(fib(10));
+        System.out.println(max(new int[] {1, 2, 5, 13, 5, 2, 10}, 0));
     }
 
     public static void printInc(int n) {
@@ -49,7 +52,7 @@ public class Main {
         return exp;
     }
 
-    public static void func(int n) { // n = 5
+    public static void fun(int n) { // n = 5
         if(n <= 0) {
             System.out.println("Base: " + n);
             return;
@@ -67,5 +70,34 @@ public class Main {
         int exp = faith * faith;
         if(n % 2 != 0) exp *= x;
         return exp;
+    }
+
+    public static int fib(int n) {
+        if(n <= 1) return n;
+        int f1 = fib(n - 1), f2 = fib(n - 2);
+        int exp = f1 + f2;
+        return exp;
+    }
+
+    public static void disp(int[] arr, int i) {
+        if(i == arr.length) return;
+        
+        System.out.println(arr[i]);
+        disp(arr, i + 1);
+        System.out.println(arr[i]);
+    }
+
+    public static int max(int[] arr, int i, int max) {
+        if(i == arr.length - 1) return arr[i];
+        int maxAhead = max(arr, i + 1);
+        return Math.max(maxAhead, arr[i]);
+    }
+
+    public static void max(int[] arr, int i, int[] maxSF) {
+        if(i == arr.length) {
+            return;
+        }
+        maxSF[0] = Math.max(maxSF[0], arr[i]);
+        max(arr, i + 1, maxSF);
     }
 }
